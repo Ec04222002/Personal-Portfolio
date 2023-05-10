@@ -10,10 +10,13 @@ const ContactForm = () => {
   const messageIn = useRef("");
   const toasterStyle = {
     style: {
-      padding: "3px",
+      padding: "4px",
       backgroundColor: colors["brightText"],
     },
   };
+
+  const emailLimit = 8;
+
   const sendEmail = (e) => {
     emailjs
       .sendForm(
@@ -43,11 +46,12 @@ const ContactForm = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    let firstName = firstNameIn.current.value;
-    let lastName = lastNameIn.current.value;
-    let email = emailIn.current.value;
-    let message = messageIn.current.value;
-    if (!isValidEmail(email) || email.trim() === "") {
+
+    let firstName = firstNameIn.current.value.trim();
+    let lastName = lastNameIn.current.value.trim();
+    let email = emailIn.current.value.trim();
+    let message = messageIn.current.value.trim();
+    if (!isValidEmail(email) || email === "") {
       toast.error("Invalid email", toasterStyle);
       return;
     }
@@ -57,8 +61,27 @@ const ContactForm = () => {
       return;
     }
 
-    if (firstName.trim() == "") firstName = "Anonymous_First";
-    if (lastName.trim() == "") lastName = "Anonymous_Last";
+    const emailCount = JSON.parse(localStorage.getItem("email_count")) || 0;
+    const emailMessages = JSON.parse(localStorage.getItem(email)) || [];
+    if (parseInt(emailCount) > emailLimit) {
+      toast.error(
+        `Cannot send email - You have reached the limit for this form. Try emailing directly to ${workEmail} by clicking on the mail icon`,
+        { ...toasterStyle, duration: 6000 }
+      );
+      return;
+    }
+    if (emailMessages.includes(message)) {
+      toast.error(
+        "Cannot send email - You've already sent this message. Will respond shortly.",
+        { ...toasterStyle, duration: 5000 }
+      );
+      return;
+    }
+    localStorage.setItem("email_count", JSON.stringify(emailCount + 1));
+    localStorage.setItem(email, JSON.stringify([...emailMessages, message]));
+
+    if (firstName === "") firstName = "Anonymous_First";
+    if (lastName === "") lastName = "Anonymous_Last";
 
     //sending
     sendEmail();

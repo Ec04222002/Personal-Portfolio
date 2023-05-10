@@ -3,7 +3,8 @@ import { Navbar, Hero, About, Project, Skill, Contact } from "./components";
 import HeroSocial from "./components/HeroSocial";
 import FloatingNavbar from "./components/FloatingNavbar";
 import { Toaster } from "react-hot-toast";
-//TODO: Deploy
+
+//TODO: add contact form span recaution
 function App() {
   return (
     <div className="bg-primary w-full font-nunito overflow-hidden text-brightText">
@@ -14,7 +15,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flexCenter relative bg-[url('./src/assets/hero-bg.png')] bg-cover">
+      <div className="flexCenter relative bg-[url('assets/hero-bg.png')] bg-cover">
         <div className="boxWidth">
           <Hero />
         </div>

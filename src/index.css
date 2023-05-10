@@ -48,6 +48,11 @@ textarea {
   resize: none;
 }
 
+textarea {
+  text-indent: 0;
+  padding: 0 1rem;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
