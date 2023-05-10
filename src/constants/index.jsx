@@ -88,7 +88,7 @@ export const countUps = [
 export const projects = [
   {
     id: "project-1",
-    thumbnail: "./src/assets/thumbnail-enos.png",
+    thumbnail: "/src/assets/thumbnail-enos.png",
     links: [
       {
         tag: "Google Play",
@@ -104,7 +104,7 @@ export const projects = [
   },
   {
     id: "project-2",
-    thumbnail: "./src/assets/thumbnail-portfolio.png",
+    thumbnail: "/src/assets/thumbnail-portfolio.png",
     links: [
       {
         tag: "Figma Design",
