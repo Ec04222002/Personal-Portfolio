@@ -31,7 +31,7 @@ const Hero = () => {
           <div
             className={`bg-primary border-2 border-active w-[135px] h-[135px] overflow-hidden rounded-full bg-cover`}
           >
-            <img src={FrontProfile} />
+            <img src={FrontProfile} alt="Elvis Chen's front-profile" />
           </div>
           <h3 className=" text-lg">Hi, I'm Elvis</h3>
         </motion.div>

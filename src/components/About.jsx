@@ -19,7 +19,7 @@ const About = () => {
         >
           <img
             src={SideProfile}
-            alt="Elvis Chen, side-photo"
+            alt="Elvis Chen's side-profile'"
             className="m-auto w-5/6"
           />
         </motion.div>
