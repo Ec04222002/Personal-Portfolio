@@ -31,7 +31,7 @@ const Project = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-left flex flex-col md:flex-row justify-center items-center flex-wrap"
+          className="text-left flex flex-col md:flex-row justify-center items-center flex-wrap pointer-events-none cursor-none"
         >
           {projects.map((project, _) => (
             <TaggedContentCard

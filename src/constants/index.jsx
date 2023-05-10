@@ -16,6 +16,8 @@ import {
   TbBrandFirebase,
 } from "react-icons/tb";
 import tailwindConfig from "../../tailwind.config";
+import project1 from "/src/assets/thumbnail-enos.png";
+import project2 from "/src/assets/thumbnail-portfolio.png";
 
 const iconSize = 27;
 const contactIconSize = 33;
@@ -88,7 +90,7 @@ export const countUps = [
 export const projects = [
   {
     id: "project-1",
-    thumbnail: "/src/assets/thumbnail-enos.png",
+    thumbnail: project1,
     links: [
       {
         tag: "Google Play",
@@ -104,7 +106,7 @@ export const projects = [
   },
   {
     id: "project-2",
-    thumbnail: "/src/assets/thumbnail-portfolio.png",
+    thumbnail: project2,
     links: [
       {
         tag: "Figma Design",
