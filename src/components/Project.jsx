@@ -31,7 +31,7 @@ const Project = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-left flex flex-col md:flex-row justify-center items-center flex-wrap pointer-events-none cursor-none"
+          className="text-left flex flex-col md:flex-row justify-center items-center flex-wrap"
         >
           {projects.map((project, _) => (
             <TaggedContentCard
@@ -41,7 +41,7 @@ const Project = () => {
               title={project.title}
               description={project.subtitle}
               tags={project.links.map((link) => (
-                <a target="blank" href={link.link}>
+                <a target="blank" href={link.link} className="hover:scale-100">
                   {link.tag}
                 </a>
               ))}

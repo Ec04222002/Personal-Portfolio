@@ -30,7 +30,7 @@ function App() {
       </div>
 
       <div className="flexCenter flex-col bg-secondary">
-        <div className="boxWidth mb-24 sm:mb-0">
+        <div className="boxWidth mb-24 sm:mb-10">
           <Contact />
         </div>
       </div>
