@@ -112,7 +112,7 @@ export const projects = [
       },
       {
         tag: "Github",
-        link: "",
+        link: "https://github.com/Ec04222002/Personal-Portfolio",
       },
     ],
     title: "Elvis's Website",
