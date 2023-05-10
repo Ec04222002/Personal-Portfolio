@@ -38,11 +38,7 @@ const Contact = () => {
                     {contact.icon}
                   </a>
                 ) : (
-                  <a
-                    onClick={() => alert("hi")}
-                    target="blank"
-                    href={contact.link}
-                  >
+                  <a target="blank" href={contact.link}>
                     {contact.icon}
                   </a>
                 )}
