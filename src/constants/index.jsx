@@ -96,10 +96,6 @@ export const projects = [
         tag: "Google Play",
         link: "https://play.google.com/store/apps/details?id=com.enosapp.enos",
       },
-      {
-        tag: "Github",
-        link: "https://github.com/Ec04222002/enos_app",
-      },
     ],
     title: "Enos",
     subtitle: "Finance App",
