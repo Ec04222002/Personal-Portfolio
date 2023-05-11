@@ -6,7 +6,7 @@ import SkillCard from "./SkillCard";
 const Skill = () => {
   return (
     <section data-section id="skills" className="py-20">
-      <div className=" text-center flex flex-col m-auto justify-center items-center">
+      <div className=" text-center flex flex-col m-auto justify-center items-center w-4/5 sm:w-full">
         <motion.h1
           variants={fadeIn("down", 0.3)}
           initial="hidden"
@@ -32,7 +32,7 @@ const Skill = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-left grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-10"
+          className=" text-left grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-10"
         >
           {skills.map((skill, _) => (
             <SkillCard

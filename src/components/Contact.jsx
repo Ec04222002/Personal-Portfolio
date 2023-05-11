@@ -12,11 +12,11 @@ const Contact = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mt-20 xl:mt-0 px-12 w-full sm:w-4/5 md:w-3/4"
+          className="mt-20 xl:mt-0 px-10 w-full sm:w-4/5 md:w-3/4"
         >
           <h2 className="uppercase m-auto">Choose Me</h2>
           <h1 className="text-active font-semibold text-5xl mb-7 leading-tight">
-            Let's Talk About a Project
+            Let's Talk <h1 className="hidden sm:block">About a Project</h1>
           </h1>
           <p className="text-lg mb-7">
             I would love to contribute to any side or company projects. I have a
@@ -55,7 +55,7 @@ const Contact = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mt-20 xl:mt-0 px-12 sm:w-4/5 md:w-3/4"
+          className="mt-20 xl:mt-0 px-10 sm:w-4/5 md:w-3/4"
         >
           <h1 className="font-semibold text-5xl mb-7">Contact me</h1>
           <p className="font-thin mb-7">

@@ -6,7 +6,7 @@ import { TaggedContentCard } from "react-ui-cards";
 const Project = () => {
   return (
     <section data-section id="projects" className="py-20 mt-20 sm:mt-0">
-      <div className=" text-center flex flex-col m-auto justify-center items-center px-10">
+      <div className=" text-center flex flex-col m-auto justify-center items-center px-11">
         <motion.h1
           variants={fadeIn("down", 0.3)}
           initial="hidden"
@@ -31,17 +31,17 @@ const Project = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-left flex flex-col md:flex-row justify-center items-center flex-wrap"
+          className="text-left flex flex-col md:flex-row justify-center items-center flex-wrap w-full"
         >
           {projects.map((project, _) => (
             <TaggedContentCard
-              className="hover:scale-100"
+              className="hover:scale-90 scale-90 sm:scale-100 sm:hover:scale-100"
               key={project.id}
               thumbnail={project.thumbnail}
               title={project.title}
               description={project.subtitle}
               tags={project.links.map((link) => (
-                <a target="blank" href={link.link} className="hover:scale-100">
+                <a target="blank" href={link.link}>
                   {link.tag}
                 </a>
               ))}

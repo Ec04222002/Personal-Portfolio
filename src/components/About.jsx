@@ -23,7 +23,7 @@ const About = () => {
             className="m-auto w-5/6"
           />
         </motion.div>
-        <div className="flexStart flex-col gap-7 md:w-3/4">
+        <div className="flexStart flex-col gap-7 w-4/5">
           <motion.h1
             variants={fadeIn("left", 0.3)}
             initial="hidden"
@@ -83,7 +83,7 @@ const About = () => {
                     </CountUp>
                   </div>
                 </div>
-                <div className="tracking-[2px] text-lg">
+                <div className="tracking-[2px] text-md sm:text-lg">
                   {count.prefix}
                   <br />
                   {count.suffix}
