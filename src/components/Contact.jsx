@@ -30,15 +30,10 @@ const Contact = () => {
           <div className="flex flex-wrap gap-10 justify-between lg:justify-start">
             {contacts.map((contact, _) => (
               <div key={contact.id} className="flex items-center gap-4">
-                {contact.name === "Phone" ? (
-                  <a onClick={() => window.open(`tel:${contact.raw}`)}>
-                    {contact.icon}
-                  </a>
-                ) : (
-                  <a target="blank" href={contact.link}>
-                    {contact.icon}
-                  </a>
-                )}
+                <a target="_blank" href={contact.link}>
+                  {contact.icon}
+                </a>
+
                 <div>
                   <h2>{contact.name}</h2>
                   <p className=" font-thin">{contact.contact}</p>

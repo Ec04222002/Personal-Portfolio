@@ -181,9 +181,8 @@ export const contacts = [
   {
     id: "contact-1",
     icon: <BsFillPhoneFill size={contactIconSize} />,
-    link: "",
+    link: "tel:+17138583809",
     name: "Phone",
-    raw: "7138583809",
     contact: "+1 (713) 858-3809",
   },
   {

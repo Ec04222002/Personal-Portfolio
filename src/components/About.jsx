@@ -98,7 +98,7 @@ const About = () => {
             viewport={{ once: true }}
             className="flex gap-16 w-full"
           >
-            <a target="blank" className="btn btn-wide" href={linkedIn.link}>
+            <a target="_blank" className="btn btn-wide" href={linkedIn.link}>
               See {linkedIn.name}
             </a>
             <a className="btn btn-primary btn-wide" href="#contact">
