@@ -31,10 +31,7 @@ const Contact = () => {
             {contacts.map((contact, _) => (
               <div key={contact.id} className="flex items-center gap-4">
                 {contact.name === "Phone" ? (
-                  <a
-                    onClick={() => window.open(`tel:${contact.raw}`)}
-                    target="blank"
-                  >
+                  <a onClick={() => window.open(`tel:${contact.raw}`)}>
                     {contact.icon}
                   </a>
                 ) : (
