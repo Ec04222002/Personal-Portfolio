@@ -17,6 +17,7 @@ export default {
         brightText: "#FFFFFF",
       },
       screens: {
+        xs: "376px",
         md: "860px",
       },
     },

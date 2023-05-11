@@ -43,7 +43,7 @@ const Hero = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="header-gradient font-bold text-7xl"
+            className="header-gradient font-bold text-6xl sm:text-7xl"
           >
             Web {devText} <br /> is my Art
           </motion.h1>

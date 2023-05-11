@@ -20,16 +20,16 @@ const About = () => {
           <img
             src={SideProfile}
             alt="Elvis Chen's side-profile"
-            className="m-auto w-5/6"
+            className="m-auto w-2/3 sm:w-5/6"
           />
         </motion.div>
-        <div className="flexStart flex-col gap-7 w-4/5">
+        <div className="flexStart flex-col gap-7 w-3/4 xs:w-4/5 px-7 sm:px-0">
           <motion.h1
             variants={fadeIn("left", 0.3)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="text-active font-semibold text-5xl"
+            className="text-active font-semibold text-4xl xs:text-5xl"
           >
             A little about me
           </motion.h1>
@@ -38,7 +38,7 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="text-lg"
+            className="text-md xs:text-lg"
           >
             I am a software engineering student at Texas A&M and a Houston-based
             developer. I gained my first professional experience working for the
@@ -58,7 +58,7 @@ const About = () => {
           >
             {countUps.map((count, _) => (
               <div key={count.id}>
-                <div className="text-[40px]">
+                <div className="text-[35px] xs:text-[40px]">
                   <div className="text-darkActive">
                     <CountUp
                       start={0}
@@ -83,7 +83,7 @@ const About = () => {
                     </CountUp>
                   </div>
                 </div>
-                <div className="tracking-[2px] text-md sm:text-lg">
+                <div className="tracking-[2px] text-sm xs:text-md sm:text-lg">
                   {count.prefix}
                   <br />
                   {count.suffix}
