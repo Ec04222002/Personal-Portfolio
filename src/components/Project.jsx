@@ -41,9 +41,11 @@ const Project = () => {
               title={project.title}
               description={project.subtitle}
               tags={project.links.map((link) => (
-                <a target="blank" href={link.link}>
-                  {link.tag}
-                </a>
+                <div>
+                  <a target="blank" href={link.link}>
+                    {link.tag}
+                  </a>
+                </div>
               ))}
             />
           ))}

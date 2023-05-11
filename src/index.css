@@ -114,7 +114,6 @@ a {
 }
 a:hover {
   color: var(--brightText);
-  scale: 1 !important;
 }
 
 .btn {
