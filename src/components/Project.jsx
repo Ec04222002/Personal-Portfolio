@@ -35,7 +35,7 @@ const Project = () => {
         >
           {projects.map((project, _) => (
             <TaggedContentCard
-              className="hover:scale-90 scale-90 sm:scale-100 sm:hover:scale-100"
+              className="hover:scale-105"
               key={project.id}
               thumbnail={project.thumbnail}
               title={project.title}
