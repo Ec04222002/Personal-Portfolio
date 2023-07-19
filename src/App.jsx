@@ -4,10 +4,9 @@ import HeroSocial from "./components/HeroSocial";
 import FloatingNavbar from "./components/FloatingNavbar";
 import { Toaster } from "react-hot-toast";
 
-//TODO: add contact form span recaution
 function App() {
   return (
-    <div className="bg-primary w-full font-nunito overflow-hidden text-brightText">
+    <div className="w-full overflow-hidden bg-primary font-nunito text-brightText">
       <Toaster position="top-center" reverseOrder={false} />
       <div>
         <div className="boxWidth">
@@ -30,8 +29,8 @@ function App() {
         </div>
       </div>
 
-      <div className="flexCenter flex-col bg-secondary">
-        <div className="boxWidth mb-24 sm:mb-10">
+      <div className="flex-col flexCenter bg-secondary">
+        <div className="mb-24 boxWidth sm:mb-10">
           <Contact />
         </div>
       </div>

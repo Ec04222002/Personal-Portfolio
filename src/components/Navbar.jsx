@@ -56,7 +56,7 @@ const Navbar = () => {
       transition={{ ease: "easeIn", duration: 0.5, type: "tween" }}
       className={`fixed w-full top-0 z-50 overflow-hidden py-6 hidden sm:flex justify-center`}
     >
-      <ul className="list-none flex items-center gap-10">
+      <ul className="flex items-center gap-10 list-none">
         {navLinks.map((nav, _) => (
           <li key={nav.id} className={`font-semibold text-sm relative`}>
             <a href={nav.link}>{nav.title}</a>

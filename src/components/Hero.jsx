@@ -21,20 +21,20 @@ const Hero = () => {
 
   return (
     <section data-section id="home" className="text-center">
-      <div className="flex flex-col gap-8 font-light justify-center">
+      <div className="flex flex-col justify-center gap-8 font-light">
         <motion.div
           variants={fadeIn("down", 0.5)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-col gap-6 justify-items-center items-center"
+          className="flex flex-col items-center gap-6 justify-items-center"
         >
           <div
             className={`bg-primary border-2 border-active w-[135px] h-[135px] overflow-hidden rounded-full bg-cover`}
           >
             <img src={FrontProfile} alt="Elvis Chen's front-profile" />
           </div>
-          <h3 className=" text-lg">Hi, I'm Elvis</h3>
+          <h3 className="text-lg ">Hi, I'm Elvis</h3>
         </motion.div>
 
         <div className="flex flex-col gap-8">
@@ -43,12 +43,12 @@ const Hero = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="header-gradient font-bold text-6xl sm:text-7xl"
+            className="text-6xl font-bold header-gradient sm:text-7xl"
           >
             Web {devText} <br /> is my Art
           </motion.h1>
           <motion.p
-            className="sm:text-lg sm:w-4/5 m-auto"
+            className="m-auto sm:text-lg sm:w-4/5"
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             whileInView="show"
@@ -65,7 +65,11 @@ const Hero = () => {
             whileInView="show"
             viewport={{ once: true }}
           >
-            <a download href="/src/assets/elvis-resume.pdf" className="btn">
+            <a
+              download="Elvis's Resume"
+              href="src/assets/elvis-resume.pdf"
+              className="btn"
+            >
               Resume
             </a>
             <a href="#contact" className="btn btn-primary">
