@@ -6,13 +6,13 @@ import { TaggedContentCard } from "react-ui-cards";
 const Project = () => {
   return (
     <section data-section id="projects" className="py-20 mt-20 sm:mt-0">
-      <div className=" text-center flex flex-col m-auto justify-center items-center">
+      <div className="flex flex-col items-center justify-center m-auto text-center ">
         <motion.h1
           variants={fadeIn("down", 0.3)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-active font-semibold text-4xl xs:text-5xl mb-7"
+          className="text-4xl font-semibold text-active xs:text-5xl mb-7"
         >
           My Projects
         </motion.h1>
@@ -31,21 +31,19 @@ const Project = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-left flex flex-col md:flex-row justify-center items-center flex-wrap w-full"
+          className="flex flex-col flex-wrap items-center justify-center w-full text-left md:flex-row"
         >
           {projects.map((project, _) => (
             <TaggedContentCard
-              className="hover:scale-90 scale-90 sm:scale-100 sm:hover:scale-100"
+              className="!transition-none !cursor-default !transform-none"
               key={project.id}
               thumbnail={project.thumbnail}
               title={project.title}
               description={project.subtitle}
               tags={project.links.map((link) => (
-                <div>
-                  <a target="_blank" href={link.link}>
-                    {link.tag}
-                  </a>
-                </div>
+                <a target="_blank" href={link.link}>
+                  {link.tag}
+                </a>
               ))}
             />
           ))}

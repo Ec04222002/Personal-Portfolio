@@ -18,7 +18,7 @@ import {
 import tailwindConfig from "../../tailwind.config";
 import project1 from "/src/assets/thumbnail-enos.png";
 import project2 from "/src/assets/thumbnail-portfolio.png";
-
+import project3 from "/src/assets/thumbnail-kudosite.png";
 const iconSize = 27;
 const contactIconSize = 33;
 
@@ -57,7 +57,7 @@ export const navLinks = [
 export const linkedIn = {
   id: "social-media-1",
   icon: <BsLinkedin size={iconSize} />,
-  link: "https://www.linkedin.com/in/elvis-chen-617b6624b/",
+  link: "https://www.linkedin.com/in/elvis-chen22",
   name: "LinkedIn",
 };
 export const socialLinks = [
@@ -118,12 +118,12 @@ export const projects = [
   },
   {
     id: "project-3",
-    thumbnail: "",
+    thumbnail: project3,
     links: [
-      // {
-      //   tag: "",
-      //   link: "",
-      // },
+      {
+        tag: "",
+        link: "#",
+      },
     ],
     title: "Kudosite (coming soon)",
     subtitle: "Personal Portfolio Builder with Ai",
@@ -191,7 +191,7 @@ export const contacts = [
   {
     id: "contact-3",
     icon: <BsLinkedin size={contactIconSize} />,
-    link: "https://www.linkedin.com/in/elvis-chen-617b6624b/",
+    link: "https://www.linkedin.com/in/elvis-chen22",
     name: "LinkedIn",
     contact: "www.linkedin.com/in/elvis-chen22",
   },

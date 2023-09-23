@@ -87,10 +87,10 @@ const ContactForm = () => {
     sendEmail();
   };
   return (
-    <div className="xl:w-[590px] 2xl:w-[650px]  overflow-hidden">
+    <div className="overflow-hidden ">
       <form
         ref={formIn}
-        className="grid grid-cols-2 grid-rows-5 gap-7 text-left"
+        className="grid grid-cols-2 grid-rows-5 text-left gap-7"
       >
         <input
           ref={firstNameIn}
@@ -115,12 +115,12 @@ const ContactForm = () => {
         />
         <textarea
           ref={messageIn}
-          className="row-span-2 col-span-2 py-3"
+          className="col-span-2 row-span-2 py-3"
           placeholder="Write your message"
           name="message"
         />
         <input
-          className="btn btn-primary col-span-2 min-w-full"
+          className="min-w-full col-span-2 btn btn-primary"
           type="submit"
           onClick={handleSubmit}
           value="Send"

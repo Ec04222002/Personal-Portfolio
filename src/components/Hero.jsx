@@ -66,7 +66,6 @@ const Hero = () => {
             viewport={{ once: true }}
           >
             <a
-              // download="Elvis's Resume"
               target="_blank"
               href="https://drive.google.com/file/d/1_HefP7wMfSOZyvWAKTDtwUz5Tq1RNR8N/view?usp=drive_link"
               className="btn"
