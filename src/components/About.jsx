@@ -4,13 +4,13 @@ import { linkedIn, countUps } from "../constants";
 import { fadeIn } from "../variants";
 import VisibilitySensor from "react-visibility-sensor";
 import CountUp from "react-countup";
-import SideProfile from "/src/assets/side-profile.png";
+import SideProfile from "/src/assets/side-profile.webp";
 
 const About = () => {
   const [viewPortEntered, setViewPortEntered] = useState(false);
   return (
     <section data-section id="about" className="boxWidth">
-      <div className="flex flex-col xl:flex-row justify-center items-center gap-8 px-10">
+      <div className="flex flex-col items-center justify-center gap-8 px-10 xl:flex-row">
         <motion.div
           variants={fadeIn("right", 0.6)}
           initial="hidden"
@@ -20,16 +20,16 @@ const About = () => {
           <img
             src={SideProfile}
             alt="Elvis Chen's side-profile"
-            className="m-auto w-2/3 sm:w-5/6"
+            className="w-2/3 m-auto sm:w-5/6"
           />
         </motion.div>
-        <div className="flexStart flex-col gap-7 w-3/4 xs:w-4/5 px-7 sm:px-0">
+        <div className="flex-col w-3/4 flexStart gap-7 xs:w-4/5 px-7 sm:px-0">
           <motion.h1
             variants={fadeIn("left", 0.3)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="text-active font-semibold text-4xl xs:text-5xl"
+            className="text-4xl font-semibold text-active xs:text-5xl"
           >
             A little about me
           </motion.h1>
@@ -54,7 +54,7 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="flex w-full md:w-4/5 justify-between"
+            className="flex justify-between w-full md:w-4/5"
           >
             {countUps.map((count, _) => (
               <div key={count.id}>
@@ -96,7 +96,7 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="flex gap-16 w-full"
+            className="flex w-full gap-16"
           >
             <a target="_blank" className="btn btn-wide" href={linkedIn.link}>
               See {linkedIn.name}

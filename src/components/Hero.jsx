@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import FrontProfile from "/src/assets/front-profile.png";
+import FrontProfile from "/src/assets/front-profile.webp";
 
 const Hero = () => {
   const [devText, setDevText] = useState("");

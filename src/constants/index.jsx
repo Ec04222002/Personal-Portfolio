@@ -16,9 +16,9 @@ import {
   TbBrandFirebase,
 } from "react-icons/tb";
 import tailwindConfig from "../../tailwind.config";
-import project1 from "/src/assets/thumbnail-enos.png";
-import project2 from "/src/assets/thumbnail-portfolio.png";
-import project3 from "/src/assets/thumbnail-kudosite.png";
+import project1 from "/src/assets/thumbnail-enos.webp";
+import project2 from "/src/assets/thumbnail-portfolio.webp";
+import project3 from "/src/assets/thumbnail-kudosite.webp";
 const iconSize = 27;
 const contactIconSize = 33;
 

@@ -14,7 +14,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flexCenter relative bg-[url('assets/hero-bg.png')] bg-cover">
+      <div className="flexCenter relative bg-[url('assets/hero-bg.webp')] bg-cover">
         <div className="boxWidth">
           <Hero />
         </div>
