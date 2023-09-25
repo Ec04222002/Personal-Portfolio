@@ -6,7 +6,7 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className="w-full overflow-hidden bg-primary font-nunito text-brightText">
+    <div className="w-full overflow-hidden bg-primary font-nunito text-text">
       <Toaster position="top-center" reverseOrder={false} />
       <div>
         <div className="boxWidth">

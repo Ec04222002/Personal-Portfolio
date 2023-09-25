@@ -8,10 +8,8 @@ const SkillCard = ({ icon, title, subtitle }) => {
           {icon}
         </div>
         <div className="h-36">
-          <h1 className=" text-brightText mb-3 text-xl">{title}</h1>
-          <p className=" font-thin text-dimText text-md sm:text-lg">
-            {subtitle}
-          </p>
+          <h1 className=" text-text mb-3 text-xl">{title}</h1>
+          <p className=" font-thin text-text text-md sm:text-lg">{subtitle}</p>
         </div>
       </div>
     </div>

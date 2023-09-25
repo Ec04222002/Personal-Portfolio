@@ -58,8 +58,8 @@ const About = () => {
           >
             {countUps.map((count, _) => (
               <div key={count.id}>
-                <div className="text-[35px] xs:text-[40px]">
-                  <div className="text-darkActive">
+                <div className="text-[35px] xs:text-[40px] text-active">
+                  <div>
                     <CountUp
                       start={0}
                       end={count.end}

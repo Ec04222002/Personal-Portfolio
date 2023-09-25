@@ -19,9 +19,7 @@
   --primary: #1d1d36;
   --secondary: #212340;
   --active: #449dd1;
-  --darkActive: "#308dc4";
-  --dimText: #eaeaea;
-  --brightText: #ffffff;
+  --text: #ffffff;
   --input: #3d3f5f;
   --transition: all 400ms ease;
 }
@@ -44,7 +42,7 @@ textarea {
   text-indent: 1rem;
   border-radius: 5px;
   background-color: var(--input);
-  color: var(--dimText);
+  color: var(--text);
   resize: none;
 }
 
@@ -69,7 +67,7 @@ section {
 }
 
 p {
-  color: var(--dimText);
+  color: var(--text);
 }
 img {
   display: block;
@@ -82,16 +80,16 @@ img {
 }
 
 .flexCenter {
-  @apply flex justify-center items-center;
+  @apply flex items-center justify-center;
 }
 
 .flexStart {
-  @apply flex justify-center items-start;
+  @apply flex items-start justify-center;
 }
 
 .header-gradient {
   background-color: #449dd1;
-  background-image: linear-gradient(to right, var(--active), var(--dimText));
+  background-image: linear-gradient(to right, var(--active), var(--text));
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -113,7 +111,7 @@ a {
   transition: var(--transition);
 }
 a:hover {
-  color: var(--brightText);
+  color: var(--text);
 }
 
 .btn {
@@ -139,7 +137,7 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: var(--brightText);
+  background-color: var(--text);
   color: var(--primary);
   border-color: transparent;
 }
@@ -182,11 +180,11 @@ a:hover {
   padding: 0.9rem;
   border-radius: 50%;
   display: flex;
-  color: var(--brightText);
+  color: var(--text);
   font-size: 1.3rem;
 }
 
 .floating-nav a:hover {
-  background-color: var(--brightText);
+  background-color: var(--text);
   color: var(--primary);
 }

@@ -12,9 +12,7 @@ export default {
         primary: "#121321",
         secondary: "#212340",
         active: "#449DD1",
-        darkActive: "#308dc4",
-        dimText: "#EAEAEA",
-        brightText: "#FFFFFF",
+        text: "#FFFFFF",
       },
       screens: {
         xs: "376px",

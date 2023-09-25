@@ -35,11 +35,12 @@ const Project = () => {
         >
           {projects.map((project, _) => (
             <TaggedContentCard
-              className="!transition-none !cursor-default !transform-none"
+              className="!transition-none !cursor-not-allowed !transform-none !pointer-events-none !hover:cursor-default"
               key={project.id}
               thumbnail={project.thumbnail}
               title={project.title}
               description={project.subtitle}
+              href={projects[0].links[0].link}
               tags={project.links.map((link) => (
                 <a target="_blank" href={link.link}>
                   {link.tag}

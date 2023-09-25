@@ -22,7 +22,7 @@ const Skill = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-md w-4/5 xs:text-lg md:w-full mb-7 text-dimText"
+          className="text-md w-4/5 xs:text-lg md:w-full mb-7 text-text"
         >
           Here are some technologies with which I have experience:
         </motion.p>

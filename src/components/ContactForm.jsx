@@ -11,7 +11,7 @@ const ContactForm = () => {
   const toasterStyle = {
     style: {
       padding: "4px",
-      backgroundColor: colors["brightText"],
+      backgroundColor: colors["text"],
     },
   };
 
