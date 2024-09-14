@@ -34,19 +34,19 @@ const Project = () => {
           className="flex flex-col flex-wrap items-center justify-center w-full text-left md:flex-row"
         >
           {projects.map((project, _) => (
-            <TaggedContentCard
-              className="!transition-none !cursor-not-allowed !transform-none !pointer-events-none !hover:cursor-default"
-              key={project.id}
-              thumbnail={project.thumbnail}
-              title={project.title}
-              description={project.subtitle}
-              href={projects[0].links[0].link}
-              tags={project.links.map((link) => (
-                <a target="_blank" href={link.link}>
-                  {link.tag}
-                </a>
-              ))}
-            />
+            <div key={project.id}>
+              <TaggedContentCard
+                className="!transition-none !cursor-not-allowed !transform-none !pointer-events-none !hover:cursor-default"
+                thumbnail={project.thumbnail}
+                title={project.title}
+                description={project.subtitle}
+                tags={project.links.map((link) => (
+                  <a target="_blank" href={link.link}>
+                    {link.tag}
+                  </a>
+                ))}
+              />
+            </div>
           ))}
         </motion.div>
       </div>

@@ -1,27 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import FrontProfile from "/src/assets/front-profile.webp";
 
 const Hero = () => {
-  const [devText, setDevText] = useState("");
-  useEffect(() => {
-    function handleResize() {
-      const minThreshold = 640;
-      window.innerWidth < minThreshold
-        ? setDevText("Dev.")
-        : setDevText("Development");
-    }
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-    // Call handler right away so state gets updated with initial window size
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <section data-section id="home" className="text-center">
-      <div className="flex flex-col items-center justify-center gap-8 font-light">
+      <div className="flex flex-col items-center justify-center gap-6 font-light">
         <motion.div
           variants={fadeIn("down", 0.5)}
           initial="hidden"
@@ -30,9 +15,13 @@ const Hero = () => {
           className="flex flex-col items-center gap-6 justify-items-center"
         >
           <div
-            className={`border-2 border-active w-[135px] h-[135px] overflow-hidden rounded-full`}
+            className={`p-2 border-2 border-active w-[140px] h-[140px] flex items-end overflow-hidden rounded-full bg-primary`}
           >
-            <img src={FrontProfile} alt="Elvis Chen's front-profile" />
+            <img
+              className="translate-y-2"
+              src={FrontProfile}
+              alt="Elvis Chen's front-profile"
+            />
           </div>
           <span className="text-lg ">Hi, I'm Elvis</span>
         </motion.div>
@@ -43,7 +32,7 @@ const Hero = () => {
           viewport={{ once: true }}
           className="text-6xl font-bold header-gradient sm:text-7xl"
         >
-          Web {devText} <br /> is my Art
+          Software Engineer
         </motion.h1>
         <motion.p
           className="sm:text-lg sm:w-4/5"
@@ -53,8 +42,8 @@ const Hero = () => {
           viewport={{ once: true }}
         >
           As a full-stack developer, I am passionate about bringing ideas to
-          life through coding. I specialize in utilizing React, Tailwind,
-          GraphQL, Framer Motion, Flutter, and Firebase technologies.
+          life through coding. I specialize in utilizing Python, Java, C++,
+          React, Tailwind, Flutter, Postgres SQL and Cloud technologies.
         </motion.p>
         <motion.div
           className="flex items-center justify-center gap-5"
@@ -65,7 +54,7 @@ const Hero = () => {
         >
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1_HefP7wMfSOZyvWAKTDtwUz5Tq1RNR8N/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1XWghaqs6sD4mxFvehbCGEy5UaieiGPsu/view?usp=drive_link"
             className="btn"
           >
             Resume

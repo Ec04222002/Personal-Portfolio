@@ -31,6 +31,7 @@ form,
 textarea {
   pointer-events: all;
 }
+
 a,
 button {
   cursor: pointer;
@@ -51,24 +52,28 @@ textarea {
   padding: 0 1rem;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--secondary);
 }
+
 section {
   position: relative;
   margin: 0 auto;
-  min-height: 85vh;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
+  padding: 10rem 0;
 }
 
 p {
   color: var(--text);
 }
+
 img {
   display: block;
   width: 100%;
@@ -110,6 +115,7 @@ a {
   color: var(--active);
   transition: var(--transition);
 }
+
 a:hover {
   color: var(--text);
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar, Hero, About, Project, Skill, Contact } from "./components";
 import HeroSocial from "./components/HeroSocial";
 import FloatingNavbar from "./components/FloatingNavbar";
@@ -14,7 +13,15 @@ function App() {
         </div>
       </div>
 
-      <div className="flexCenter relative bg-[url('assets/hero-bg.webp')] bg-cover">
+      <div
+        style={{
+          width: "100%",
+          height: "100vh",
+          backgroundImage:
+            "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
+        }}
+        className="flexCenter bg-[length:25%_100%]  lg:bg-[length:12%_100%]"
+      >
         <div className="boxWidth">
           <Hero />
         </div>
@@ -30,7 +37,7 @@ function App() {
       </div>
 
       <div className="flex-col flexCenter bg-secondary">
-        <div className="mb-24 boxWidth sm:mb-10">
+        <div className=" boxWidth">
           <Contact />
         </div>
       </div>

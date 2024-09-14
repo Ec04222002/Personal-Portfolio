@@ -6,13 +6,13 @@ import SkillCard from "./SkillCard";
 const Skill = () => {
   return (
     <section data-section id="skills" className="py-20">
-      <div className=" text-center flex flex-col m-auto justify-center items-center w-4/5 sm:w-full">
+      <div className="flex flex-col items-center justify-center w-4/5 m-auto text-center  sm:w-full">
         <motion.h1
           variants={fadeIn("down", 0.3)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-active font-semibold  text-4xl xs:text-5xl mb-7"
+          className="text-4xl font-semibold text-active xs:text-5xl mb-7"
         >
           My Skills
         </motion.h1>
@@ -22,7 +22,7 @@ const Skill = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-md w-4/5 xs:text-lg md:w-full mb-7 text-text"
+          className="w-4/5 text-md xs:text-lg md:w-full mb-7 text-text"
         >
           Here are some technologies with which I have experience:
         </motion.p>
@@ -32,7 +32,7 @@ const Skill = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className=" text-left grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-10"
+          className="grid grid-cols-2 gap-3 text-left  md:grid-cols-3 md:gap-10"
         >
           {skills.map((skill, _) => (
             <SkillCard

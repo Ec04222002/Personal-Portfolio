@@ -1,29 +1,64 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { linkedIn, countUps } from "../constants";
 import { fadeIn } from "../variants";
-import VisibilitySensor from "react-visibility-sensor";
-import CountUp from "react-countup";
 import SideProfile from "/src/assets/side-profile.webp";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+const Counter = ({ start, end, duration }) => {
+  const count = useMotionValue(start);
+  const rounded = useTransform(count, Math.round);
+  const [counterRef, inView] = useInView();
+  useEffect(() => {
+    let animation;
+    if (inView) {
+      animation = animate(count, end, { duration });
+    }
+    return animation?.stop;
+  }, [inView]);
+
+  return (
+    <motion.h1 ref={counterRef} viewport={{ once: true }}>
+      {rounded}
+    </motion.h1>
+  );
+};
 
 const About = () => {
-  const [viewPortEntered, setViewPortEntered] = useState(false);
   return (
     <section data-section id="about" className="boxWidth">
-      <div className="flex flex-col items-center justify-center gap-8 px-10 xl:flex-row">
+      <div className="flex flex-col items-center justify-center gap-8 xl:flex-row">
         <motion.div
+          className="relative w-full h-full "
           variants={fadeIn("right", 0.6)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
-          <img
-            src={SideProfile}
-            alt="Elvis Chen's side-profile"
-            className="w-2/3 m-auto sm:w-5/6"
-          />
+          <svg
+            className="w-full h-full"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 315 199"
+          >
+            <defs>
+              <clipPath id="trapezoid-clip">
+                <path d="M 75.84375 28.777344 C 83.566406 11.441406 100.734375 0.28125 119.671875 0.28125 L 192.664062 0.28125 C 211.398438 0.28125 228.417969 11.207031 236.257812 28.261719 L 283.367188 130.738281 C 298.027344 162.621094 274.792969 199 239.777344 199 L 74.011719 199 C 39.238281 199 16.003906 163.085938 30.183594 131.253906 Z M 75.84375 28.777344" />
+              </clipPath>
+            </defs>
+            <path
+              d="M 75.84375 28.777344 C 83.566406 11.441406 100.734375 0.28125 119.671875 0.28125 L 192.664062 0.28125 C 211.398438 0.28125 228.417969 11.207031 236.257812 28.261719 L 283.367188 130.738281 C 298.027344 162.621094 274.792969 199 239.777344 199 L 74.011719 199 C 39.238281 199 16.003906 163.085938 30.183594 131.253906 Z M 75.84375 28.777344"
+              fill="var(--secondary)" // Replace this with your desired color
+            />
+            <image
+              href={SideProfile}
+              x="0"
+              y="0"
+              width="315"
+              height="199"
+              clipPath="url(#trapezoid-clip)"
+            />
+          </svg>
         </motion.div>
-        <div className="flex-col w-3/4 flexStart gap-7 xs:w-4/5 px-7 sm:px-0">
+        <div className="flex-col w-3/4 flexStart gap-7 xs:w-4/5">
           <motion.h1
             variants={fadeIn("left", 0.3)}
             initial="hidden"
@@ -38,16 +73,18 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="text-md xs:text-lg"
+            className="text-lg"
           >
-            I am a software engineering student at Texas A&M and a Houston-based
-            developer. I gained my first professional experience working for the
-            University of Washington, where I designed a trans-piler website
-            that converts biological language (Antimony) into XML. In my free
-            time, I stay up-to-date with emerging technologies and enjoy playing
-            pickup soccer with friends. I am eager to gain more real-world
-            experience as a Front-end Developer and am currently seeking an
-            internship or co-op opportunity to further enhance my skills.
+            👋 Howdy, I am a senior computer science student at Texas A&M
+            College Station graduating December 2025. I gained my first
+            professional experience working for the University of Washington,
+            and since then have worked at a music startup and then a fortune 200
+            company at USAA Bank. In my free time, I stay up-to-date with
+            emerging technologies by building personal coding projects and enjoy
+            playing pickup soccer with friends. I am eager to gain more
+            real-world experience as a software engineering in full-stack or
+            frontend development and am currently seeking an internship
+            opportunity.
           </motion.p>
           <motion.div
             variants={fadeIn("left", 0.5)}
@@ -59,28 +96,8 @@ const About = () => {
             {countUps.map((count, _) => (
               <div key={count.id}>
                 <div className="text-[35px] xs:text-[40px] text-active">
-                  <div>
-                    <CountUp
-                      start={0}
-                      end={count.end}
-                      duration={5}
-                      delay={0.5}
-                      suffix="+"
-                    >
-                      {({ countUpRef, start }) => (
-                        <VisibilitySensor
-                          onChange={(isVisible) => {
-                            if (isVisible && !viewPortEntered) {
-                              setViewPortEntered(true);
-                              start();
-                            }
-                          }}
-                          delayedCall
-                        >
-                          <span ref={countUpRef} />
-                        </VisibilitySensor>
-                      )}
-                    </CountUp>
+                  <div className="flex">
+                    <Counter start={0} end={count.end} duration={4} />+
                   </div>
                 </div>
                 <div className="tracking-[2px] text-sm xs:text-md sm:text-lg">

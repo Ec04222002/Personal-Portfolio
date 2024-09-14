@@ -1,6 +1,6 @@
 import { BsLinkedin, BsFillPhoneFill } from "react-icons/bs";
 import { ImMail } from "react-icons/im";
-import { FaGithub, FaReact, FaPhoneSquareAlt } from "react-icons/fa";
+import { FaGithub, FaReact } from "react-icons/fa";
 import {
   AiOutlineHome,
   AiOutlineUser,
@@ -8,17 +8,18 @@ import {
   AiOutlineProject,
 } from "react-icons/ai";
 import { BiMessageSquareDetail } from "react-icons/bi";
-import { SiGraphql } from "react-icons/si";
 import {
-  TbBrandTailwind,
-  TbBrandFramerMotion,
   TbBrandFlutter,
   TbBrandFirebase,
+  TbBrandPython,
+  TbBrandJavascript,
 } from "react-icons/tb";
+import { FaJava } from "react-icons/fa";
 import tailwindConfig from "../../tailwind.config";
 import project1 from "/src/assets/thumbnail-enos.webp";
 import project2 from "/src/assets/thumbnail-portfolio.webp";
 import project3 from "/src/assets/thumbnail-kudosite.webp";
+import project4 from "/src/assets/thumbnail-bomberman.webp";
 const iconSize = 27;
 const contactIconSize = 33;
 
@@ -30,7 +31,7 @@ export const navLinks = [
   { id: "nav-item-1", title: "Home", link: "#home", icon: <AiOutlineHome /> },
   {
     id: "nav-item-2",
-    title: "About Me",
+    title: "About",
     link: "#about",
     icon: <AiOutlineUser />,
   },
@@ -48,7 +49,7 @@ export const navLinks = [
   },
   {
     id: "nav-item-5",
-    title: "Contact Me",
+    title: "Contact",
     link: "#contact",
     icon: <BiMessageSquareDetail />,
   },
@@ -90,18 +91,30 @@ export const countUps = [
 export const projects = [
   {
     id: "project-1",
-    thumbnail: project1,
+    thumbnail: project3,
     links: [
       {
-        tag: "Google Play",
-        link: "https://play.google.com/store/apps/details?id=com.enosapp.enos",
+        tag: "Website Builder",
+        link: "https://www.kudosites.com/?msg=w",
       },
     ],
-    title: "Enos",
-    subtitle: "Finance App",
+    title: "Kudosites",
+    subtitle: "Personal Portfolio Builder with Ai",
   },
   {
     id: "project-2",
+    thumbnail: project1,
+    links: [
+      {
+        tag: "Github",
+        link: "https://play.google.com/store/apps/details?id=com.enosapp.enos",
+      },
+    ],
+    title: "Enos (down right now 😔) ",
+    subtitle: "Finance App",
+  },
+  {
+    id: "project-3",
     thumbnail: project2,
     links: [
       {
@@ -117,16 +130,11 @@ export const projects = [
     subtitle: "Personal Portfolio Website",
   },
   {
-    id: "project-3",
-    thumbnail: project3,
-    links: [
-      {
-        tag: "",
-        link: "#",
-      },
-    ],
-    title: "Kudosite (coming soon)",
-    subtitle: "Personal Portfolio Builder with Ai",
+    id: "project-4",
+    thumbnail: project4,
+    links: [],
+    title: "Modern Bomber Man (in progress)",
+    subtitle: "Multiplayer Web Game",
   },
 ];
 
@@ -139,22 +147,22 @@ export const skills = [
   },
   {
     id: "skill-2",
-    icon: <TbBrandTailwind size={iconSize} />,
-    title: "Tailwind CSS",
+    icon: <TbBrandPython size={iconSize} />,
+    title: "Python",
     subtitle:
-      "Extensive experience with 5+ personal projects usually integrated with React",
+      "Extensive experience with 5+ personal projects usually with automation scripting",
   },
   {
     id: "skill-3",
-    icon: <SiGraphql size={iconSize} />,
-    title: "Graph QL",
+    icon: <FaJava size={iconSize} />,
+    title: "Java",
     subtitle:
-      "Experience with 3+ personal projects usually integrated with React",
+      "Experience with 3+ personal projects usually integrated with SpringBoot",
   },
   {
     id: "skill-4",
-    icon: <TbBrandFramerMotion size={iconSize} />,
-    title: "Framer Motion",
+    icon: <TbBrandJavascript size={iconSize} />,
+    title: "JavaScript",
     subtitle:
       "Experience with 3+ personal projects usually integrated with React",
   },
@@ -184,7 +192,7 @@ export const contacts = [
   {
     id: "contact-2",
     icon: <ImMail size={contactIconSize} />,
-    link: `mailto:${workEmail}?Subject=FromPersonalPortfolioContact`,
+    link: `mailto:${workEmail}?Subject=PersonalPortfolioContact`,
     name: "Email",
     contact: workEmail,
   },
